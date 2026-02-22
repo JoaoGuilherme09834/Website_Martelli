@@ -2,303 +2,33 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameLib - Sua Biblioteca de Jogos</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-
-        .description-section {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        h2 {
-            color: #764ba2;
-            margin-bottom: 20px;
-            font-size: 2em;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            color: #667eea;
-            margin: 25px 0 15px 0;
-            font-size: 1.5em;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .feature-card {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid #e0e0e0;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .feature-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h4 {
-            color: #764ba2;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-
-        .game-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .game-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            min-height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .game-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-
-        .game-card h4 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        .game-card p {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-
-        .purpose-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .purpose-box h3 {
-            color: white;
-            margin-top: 0;
-        }
-
-        .purpose-box p {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: white;
-            font-size: 0.9em;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: white;
-            color: #764ba2;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255,255,255,0.3);
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            
-            .container {
-                padding: 10px;
-            }
-            
-            .description-section {
-                padding: 20px;
-            }
-        }
-    </style>
+    <title>GameLib</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🎮 GameLib</h1>
-            <p class="subtitle">Sua Biblioteca Virtual de Jogos</p>
-        </header>
-
-        <!-- Seção de Descrição Principal -->
-        <section class="description-section">
-            <h2>Sobre o GameLib</h2>
-            <p style="font-size: 1.1em; margin-bottom: 20px;">
-                O <strong>GameLib</strong> é uma plataforma digital desenvolvida para ser sua biblioteca pessoal de jogos, 
-                permitindo que você organize, descubra e compartilhe suas experiências gamers de forma simples e intuitiva.
-            </p>
-
-            <h3>Como Funciona?</h3>
-            <p>
-                O GameLib funciona como um catálogo personalizado onde você pode:
-            </p>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h4>Organizar Coleção</h4>
-                    <p>Crie listas personalizadas dos seus jogos, separe por gênero, plataforma ou status (jogando, completo, quero jogar)</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h4>Descobrir Jogos</h4>
-                    <p>Explore recomendações baseadas nos seus gêneros favoritos e descubra novos títulos</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h4>Avaliar e Comentar</h4>
-                    <p>Dê notas, escreva reviews e compartilhe sua opinião sobre cada jogo</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h4>Estatísticas</h4>
-                    <p>Visualize estatísticas da sua coleção: horas jogadas, jogos completados, gêneros favoritos e mais</p>
-                </div>
-            </div>
-
-            <h3>O Que o Site Apresenta?</h3>
-            <p>Em nossa plataforma, você encontra:</p>
-            
-            <div class="game-showcase">
-                <div class="game-card">
-                    <h4>🎯 Jogos Populares</h4>
-                    <p>Os títulos mais jogados pela comunidade</p>
-                </div>
-                <div class="game-card">
-                    <h4>🆕 Lançamentos</h4>
-                    <p>Os jogos mais recentes do mercado</p>
-                </div>
-                <div class="game-card">
-                    <h4>🏆 Clássicos</h4>
-                    <p>Jogos que marcaram época</p>
-                </div>
-                <div class="game-card">
-                    <h4>🎪 Multiplayer</h4>
-                    <p>Melhores jogos para jogar com amigos</p>
-                </div>
-                <div class="game-card">
-                    <h4>🎨 Indies</h4>
-                    <p>Pérolas independentes que você precisa conhecer</p>
-                </div>
-                <div class="game-card">
-                    <h4>💎 AAA</h4>
-                    <p>Os grandes sucessos da indústria</p>
-                </div>
-            </div>
-
-            <!-- Finalidade do Site -->
-            <div class="purpose-box">
-                <h3>🌟 Nossa Finalidade</h3>
-                <p>
-                    O GameLib nasceu com o propósito de criar uma comunidade organizada e apaixonada por jogos, 
-                    onde cada jogador possa ter seu espaço para catalogar suas experiências, descobrir novos títulos 
-                    e compartilhar conhecimento com outros gamers.
-                </p>
-                <p style="font-size: 1.1em;">
-                    Queremos ser mais que um catálogo - queremos ser o diário de bordo da sua jornada gamer, 
-                    ajudando você a nunca esquecer aquela experiência incrível que teve em cada jogo.
-                </p>
-                <a href="#" class="btn">Comece sua Coleção</a>
-            </div>
-
-            <h3>Recursos Adicionais</h3>
-            <ul style="margin-left: 20px; list-style-type: none;">
-                <li style="margin: 10px 0;">✓ <strong>Perfil Personalizado:</strong> Crie seu perfil com seus jogos favoritos</li>
-                <li style="margin: 10px 0;">✓ <strong>Listas de Desejos:</strong> Mantenha uma lista dos jogos que pretende comprar</li>
-                <li style="margin: 10px 0;">✓ <strong>Comparação:</strong> Compare sua biblioteca com a de amigos</li>
-                <li style="margin: 10px 0;">✓ <strong>Notificações:</strong> Receba alertas de promoções dos jogos desejados</li>
-                <li style="margin: 10px 0;">✓ <strong>Integração:</strong> Conecte com Steam, Xbox, PlayStation e outras plataformas</li>
-            </ul>
-        </section>
-
-        <!-- Rodapé -->
-        <footer>
-            <p>© 2024 GameLib - Sua Biblioteca Virtual de Jogos | Desenvolvido com ❤️ para gamers</p>
-            <p style="margin-top: 10px; font-size: 0.8em;">Em breve: versão mobile app</p>
-        </footer>
-    </div>
+    <h1>GameLib - Biblioteca de Jogos</h1>
+    
+    <h2>O que é?</h2>
+    <p>O GameLib é um site que funciona como uma biblioteca pessoal de jogos, onde você pode organizar e catalogar todos os jogos que já jogou, está jogando ou quer jogar.</p>
+    
+    <h2>Como funciona?</h2>
+    <p>Você cria seu perfil e começa a adicionar jogos à sua coleção. Cada jogo pode ser marcado com status como:</p>
+    <ul>
+        <li>Jogando</li>
+        <li>Completo</li>
+        <li>Quero jogar</li>
+        <li>Abandonei</li>
+    </ul>
+    <p>Também é possível dar notas e escrever comentários sobre cada jogo.</p>
+    
+    <h2>O que apresenta?</h2>
+    <p>O site mostra:</p>
+    <ul>
+        <li>Sua coleção organizada</li>
+        <li>Estatísticas como total de jogos e horas jogadas</li>
+        <li>Recomendações baseadas nos seus gêneros favoritos</li>
+    </ul>
+    
+    <h2>Finalidade:</h2>
+    <p>Ajudar os gamers a manterem um registro organizado de sua jornada nos games, nunca esquecendo os jogos que marcaram sua história e descobrindo novos títulos para jogar.</p>
 </body>
 </html>
